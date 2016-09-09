@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Sample.Main.MainWindowController">
+   <children>
+      <Label fx:id="label" alignment="CENTER" layoutX="291.0" layoutY="164.0" text="အိုကေ" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <font>
+            <Font name="Myanmar2" size="20.0" />
+         </font>
+      </Label>
+      <HBox alignment="CENTER" layoutX="201.0" layoutY="208.0" spacing="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <TextField fx:id="field" layoutX="201.0" layoutY="208.0">
+            	<font>
+            		<Font name="Padauk" size="12" />
+            	</font>
+            </TextField>
+            <Button layoutX="381.0" layoutY="208.0" mnemonicParsing="false" onAction="#handleButton" text="Change Text" />
+         </children>
+      </HBox>
+      <Label fx:id="label1" alignment="CENTER" layoutX="140.0" layoutY="86.0" style="-fx-font-family: myanmar2;" text="%key.testlbl">
+         <font>
+            <Font name="Myanmar2" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

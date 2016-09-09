@@ -26,10 +26,24 @@ public class Main extends Application {
         try {
             // view
         	FXMLLoader loader = new FXMLLoader(Main.class.getResource("MainWindowView.fxml"));  
-        	  Locale	local=new Locale("my", "MY");        	 
-              //loader.setResources(ResourceBundle.getBundle("Bundle_MY_my", local));
-              loader.setResources(ResourceBundle.getBundle("Bundle_EN_en", local));
-         
+        	  ResourceBundle bundle = null;
+        	InputStream stream = Main.class.getResourceAsStream("/en_EN.properties");
+        	bundle = new PropertyResourceBundle(new InputStreamReader(stream, "UTF-8"));
+
+        	// view
+        	FXMLLoader loader = new FXMLLoader();
+
+        	if(Util.Language == "my")
+        	{
+        		stream = Main.class.getResourceAsStream("/my_MY.properties");
+        		if(stream != null)
+        		{
+        			bundle = new PropertyResourceBundle(new InputStreamReader(stream, "UTF-8"));
+        			loader.setResources(bundle);
+        		}
+        	}
+
+        	loader.setResources(bundle);
             AnchorPane pane = loader.load();
             
 
